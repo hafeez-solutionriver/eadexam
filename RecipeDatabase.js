@@ -10,12 +10,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/examdae?directConnection=true&server
 const Schema= new mongoose.Schema({
     name:String,
     description:String,
-    ingrediants:String,
-    thumbnail:String,
+    ingrediants:String
 })
 
-const Usermodel = mongoose.model("Recipe",Schema);
+const Recipemodel = mongoose.model("Recipe",Schema);
 
-module.exports =Usermodel;
+module.exports =Recipemodel;
 
 

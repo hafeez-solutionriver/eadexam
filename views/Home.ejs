@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <title>Recipe System</title>
     
     <style>
@@ -35,7 +38,13 @@
     </style>
 </head>
 <body>
-    
+   
+    <div class="container">
+          <div class="row">
+                <div class="col-md-12">
+                 <h1>Recipe System</h1>
+                </div>
+          </div>
     <% if (recipes!="") { %>
         <table>
             <thead>
@@ -54,7 +63,8 @@
                     <td><%= recipe.name %></td>
                     <td><%= recipe.description %></td>
                     <td><%= recipe.ingrediants %></td>
-                    <td><%= recipe.thumbnail %></td>
+                    
+                    <td><img src='../public/recipe.jpg' width="100px" height="100px"/></td>
                     
                     <td>
                         <a href="/edit/<%= recipe._id %>">Update</a>
