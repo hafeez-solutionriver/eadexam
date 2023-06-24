@@ -4,17 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Update</title>
-    
   </head>
-  
   <body>
-    <form action="/update/<%= recipe._id %>" method="post">
-      <input type="text" name="name" placeholder="Recipe Name" />
-      <input type="text" name="description" placeholder="Description" />
-      <input type="text" name="ingrediants" placeholder="Ingrediants" />
+   
+    <div class="container " style="margin-left: 40%; margin-top: 5%;">
+      <div class="row">
+            <div class="col-md-12">
+             <h1>Update Recipe</h1>
+            </div>
 
-      <button>Register</button>
-    </form>
+            <form action="/update/<%= recipe._id %>" method="post" class="m-2">
+              <input type="text" name="name" placeholder="Recipe Name" class="m-2"/>
+              <br>
+              <input type="text" name="description" placeholder="Description" class="m-2"/>
+              <br>
+              <input type="text" name="ingrediants" placeholder="Ingrediants" class="m-2"/>
+              <br>
+              <!-- image select -->
+              
+              <button class="m-2 btn btn-primary">Update</button>
+            </form>
+      </div>
+
+    
   </body>
 </html>
