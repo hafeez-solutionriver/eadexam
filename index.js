@@ -2,8 +2,6 @@ const express =require("express")
 const app =express();
 const Recipe = require("./RecipeDatabase");
 
-
-
 app.set("view engine","ejs");
 app.use(express.urlencoded({extended:false}))
 
