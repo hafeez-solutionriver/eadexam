@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe System</title>
+    
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,td{
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        th{
+            background-color: #4CAF50;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            padding: 6px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        a:hover{
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    
+    <% if (recipes!="") { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Recipe</th>
+                    <th>Description</th>
+                    <th>Ingrediants</th>
+                    <th>Thumbnail</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% recipes.forEach((recipe,index) => { %>
+                 <tr>
+                    
+                    <td><%= recipe.name %></td>
+                    <td><%= recipe.description %></td>
+                    <td><%= recipe.ingrediants %></td>
+                    <td><%= recipe.thumbnail %></td>
+                    
+                    <td>
+                        <a href="/edit/<%= recipe._id %>">Update</a>
+                        <a href="/delete/<%= recipe._id %>">Delete</a>
+                    </td>
+                 </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else{ %>
+        <h1>NO RECIPE FOUND</h1>
+        <% }  %>   
+</body>
+</html>
