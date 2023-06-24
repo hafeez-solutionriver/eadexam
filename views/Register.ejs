@@ -8,13 +8,26 @@
     <title>Register</title>
   </head>
   <body>
-    <form action="/register" method="post">
-      <input type="text" name="name" placeholder="Recipe Name" />
-      <input type="text" name="description" placeholder="Description" />
-      <input type="text" name="ingrediants" placeholder="Ingrediants" />
-      <!-- image select -->
-      
-      <button>Register</button>
-    </form>
+    <!-- Udpate the form by using bootstrap -->
+    <div class="container " style="margin-left: 40%; margin-top: 5%;">
+      <div class="row">
+            <div class="col-md-12">
+             <h1>Add Recipe</h1>
+            </div>
+
+            <form action="/register" method="post" class="m-2">
+              <input type="text" name="name" placeholder="Recipe Name" class="m-2"/>
+              <br>
+              <input type="text" name="description" placeholder="Description" class="m-2"/>
+              <br>
+              <input type="text" name="ingrediants" placeholder="Ingrediants" class="m-2"/>
+              <br>
+              <!-- image select -->
+              
+              <button class="m-2 btn btn-primary">Register</button>
+            </form>
+      </div>
+
+    
   </body>
 </html>
